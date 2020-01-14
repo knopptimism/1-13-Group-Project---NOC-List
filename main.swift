@@ -160,18 +160,31 @@ securityLevelTotals()
 //: ## Step 11 (Optional)
 //: Create and call a function that prints the cover names and access levels of all agents, but the list should be sorted by access level, in ascending order.
 
-func sortedByLevel() {
+/* func sortedByLevel() {
   
   var sortedAgents = agentArray
   for agent in sortedAgents {
     sortedAgents.sort {
       $0.accessLevel < $1.accessLevel
-    }
+      print("\(agent.coverName), Access Level: \(agent.accessLevel)")
+
   }
-  print(sortedAgents)
-}
-
-sortedByLevel()
+  }
+}*/
 
 
+func sortedByLevel2() {
+  
+  let sortedAgents2 = agentArray 
+  var sortedAgents = sortedAgents2.sorted {
+      $0.accessLevel < $1.accessLevel
+  }
+  for agent in sortedAgents {
 
+   print("\(agent.coverName), Access Level: \(agent.accessLevel)")
+
+  }
+  }
+
+
+sortedByLevel2()
